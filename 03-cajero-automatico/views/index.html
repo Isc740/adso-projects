@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cajero Automatico</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #FFFFFF;
+      font-family: 'Arial', sans-serif;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <h1>CAJERO AUTOMÁTICO</h1>
+    <p id="error-message"></p>
+    <form action="" id="login-form">
+      <label for="user-id">Ingrese su ID:</label>
+      <input type="text" id="user-id" name="user-id" required>
+      <label for="user-passwd">Ingrese su contraseña:</label>
+      <input type="password" id="user-passwd" name="user-passwd" required>
+      <div class="submit-container">
+        <input type="submit" value="submit">
+      </div>
+    </form>
+  </div>
+
+  <script src="/src/login.js"></script>
+</body>
+
+</html>

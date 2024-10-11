@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cajero Automatico</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #FFFFFF;
+      font-family: 'Arial', sans-serif;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <h1 id="welcome"></h1>
+    <h3 id="balance"></h3>
+    <p id="error"></p>
+
+    <form method="" id="withdraw-form">
+      <label for="bill-options">Cuanto desea retirar?</label>
+      <select id="bill-options" name="bill-options">
+        <option value="500000">500.000</option>
+        <option value="100000">100.000</option>
+        <option value="50000">50.000</option>
+        <option value="20000">20.000</option>
+        <option value="10000">10.000</option>
+      </select>
+      <div class="submit-container">
+        <input type="submit" value="Completar Transacción"><br>
+        <input type="submit" value="Salir">
+      </div>
+    </form>
+    <script src="/src/transaction.js"></script>
+  </div>
+</body>
+
+</html>

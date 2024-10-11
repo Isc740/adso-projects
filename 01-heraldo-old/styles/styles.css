@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 6px 18%;
+}
+
+h1 {
+    color: #e30613;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 37px;
+    font-weight: 4000;
+}
+
+h3 {
+    padding-right: 30px;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    margin: 0;
+    /* padding: 0 0 0 0; */
+}
+
+h6 {
+    font-family: Helvetica, sans-serif;
+    font-size:9px;
+    color: #6b6b6b;
+    font-weight: 100;
+    margin: 0 0 4px 0;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #6b6b6b;
+
+}
+
+#header {
+    margin: auto auto;
+}
+
+#h-thumb {
+    color: #e30613;
+    font-size: 11px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 450;
+    padding-bottom: 15px;
+}
+
+#h-date {
+    color: #6b6b6b;
+    font-size: 9px;
+    font-family: Helvetica, sans-serif;
+}
+
+.h-text {
+    text-align: center;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.hr-gray {
+    border: none;
+    border-top: 1px solid #dddddd;
+    margin: 0;
+}
+
+.hr-red {
+    border: none;
+    border-top: 2px solid #e30613;
+    margin: 0;
+}
+
+#n-menu {
+    text-align: center;
+}
+
+#n-menu ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#n-menu li {
+    display: inline-block;
+    list-style-type: none;
+    font-family: Helvetica, sans-serif;
+    margin: -8px 9px;
+}
+
+#ft-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 20px 0;
+    position: relative;
+}
+
+#ft-div h6 {
+    max-width: 400px;
+    text-align: center;
+    margin: 0 20px;
+    flex: 1;
+}
+
+#ft-button1 {
+    color: #ffffff;
+    background-color: #e30613;
+    border: none;
+    width: 200px;
+    height: 39px;
+    text-align: center;
+}
+
+.ft-networks {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+}
+
+.ft-networks h3 {
+    font-size: 14px;
+    color: #6b6b6b;
+    margin: 0;
+}
+
+#ft-tittle {
+    text-align: center;
+}
+
+.h-tittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.left-align {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-articles {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 880px; 
+    padding: 30px 30px 30px 0px;
+}
+
+.section-articles div {
+    flex: 1;
+}
+
+.section-articles figure {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.section-articles img {
+    height: auto;
+    width: auto;
+}

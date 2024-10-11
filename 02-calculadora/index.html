@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+  <div class="calculator" role="application" aria-label="Calculator">
+    <div class="display" role="region" aria-label="Display">
+      <input type="text" id="result" value="0" readonly aria-readonly="true" />
+    </div>
+    <div class="buttons" role="toolbar" aria-label="Buttons">
+      <button class="number" aria-label="7">7</button>
+      <button class="number" aria-label="8">8</button>
+      <button class="number" aria-label="9">9</button>
+      <button class="operator" aria-label="Add">+</button>
+
+      <button class="number" aria-label="4">4</button>
+      <button class="number" aria-label="5">5</button>
+      <button class="number" aria-label="6">6</button>
+      <button class="operator" aria-label="Subtract">-</button>
+
+      <button class="number" aria-label="1">1</button>
+      <button class="number" aria-label="2">2</button>
+      <button class="number" aria-label="3">3</button>
+      <button class="operator" aria-label="Multiply">*</button>
+
+      <button class="number" aria-label="0">0</button>
+      <button class="number" aria-label="Decimal point">.</button>
+      <button class="operator" aria-label="Equals">=</button>
+      <button class="operator" aria-label="Divide">/</button>
+
+      <button class="clear" aria-label="Clear">C</button>
+      <button class="backspace" aria-label="Backspace">←</button>
+    </div>
+  </div>
+  <script src="/src/app.js"></script>
+  <!-- <script src="/src/app2.js"></script> -->
+</body>
+
+</html>
