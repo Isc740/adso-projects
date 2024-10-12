@@ -10,6 +10,12 @@ main {
     grid-template-rows: 200px 200px 200px ;
 }
 
+#grid-container input {
+    border: 0.1;
+    box-shadow: none;
+    border-radius: 0;
+}
+
 .grid {
     border: 1px solid black;
     display: grid;
