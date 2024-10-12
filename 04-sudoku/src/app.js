@@ -1,4 +1,4 @@
-const manageUserInput = () => {
+const manageUserInput = (gridCells) => {
 	let selectedValue = null;
 
 	const selectionButtons = document.querySelectorAll(
@@ -8,14 +8,11 @@ const manageUserInput = () => {
 	for (button of selectionButtons) {
 		button.addEventListener("click", function () {
 			selectedValue = this.value;
-			console.log(selectedValue);
 		});
 	}
 
-	const gridCells = document.querySelectorAll(".grid-cell");
 	for (cell of gridCells) {
 		cell.addEventListener("click", function () {
-            console.log(this.value);
 			if (selectedValue !== null && this.value === "") {
 				this.value = selectedValue;
 			}
@@ -23,6 +20,11 @@ const manageUserInput = () => {
 	}
 };
 
+const randomize_grid = () => {
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-	manageUserInput();
+	const gridCells = document.querySelectorAll(".grid-cell");
+
+	manageUserInput(gridCells);
 });
