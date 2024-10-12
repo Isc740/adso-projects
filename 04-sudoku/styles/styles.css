@@ -1,0 +1,27 @@
+main {
+    display: flex ;
+    justify-content: center;
+    margin-top: 6%;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px ;
+}
+
+.grid {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#selection-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.selection-container input {
+    padding: 10px 30px;
+}
