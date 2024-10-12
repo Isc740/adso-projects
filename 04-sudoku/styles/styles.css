@@ -16,7 +16,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
 }
 
-#selection-container {
+.selection-container {
     display: flex;
     justify-content: center;
     margin-top: 5%;
