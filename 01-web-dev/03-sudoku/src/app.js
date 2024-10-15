@@ -1,6 +1,14 @@
+const clear = () => {
+	const gridCells = document.querySelectorAll(".cell");
+	document.getElementById("clear").addEventListener("click", function () {
+		for (cell of gridCells) {
+			cell.value = "";
+		}
+	});
+};
+
 const manageUserInput = () => {
 	let selectedValue = null;
-
 	const selectionButtons = document.querySelectorAll(
 		".selection-container input",
 	);
@@ -10,7 +18,7 @@ const manageUserInput = () => {
 		});
 	}
 
-	const gridCells = document.querySelectorAll(".grid-cell");
+	const gridCells = document.querySelectorAll(".cell");
 	for (cell of gridCells) {
 		cell.addEventListener("click", function () {
 			if (selectedValue !== null && this.value === "") {
@@ -18,11 +26,9 @@ const manageUserInput = () => {
 			}
 		});
 	}
+	clear();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-	const grids = document.querySelectorAll(".grid");
-
 	manageUserInput();
-	randomizeGrids(grids);
 });
