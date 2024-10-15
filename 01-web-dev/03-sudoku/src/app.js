@@ -1,7 +1,7 @@
-const clear = () => {
+const manageClear = () => {
 	const gridCells = document.querySelectorAll(".cell");
-	document.getElementById("clear").addEventListener("click", function () {
-		for (cell of gridCells) {
+	document.getElementById("clear").addEventListener("click", function() {
+		for (const cell of gridCells) {
 			cell.value = "";
 		}
 	});
@@ -12,21 +12,23 @@ const manageUserInput = () => {
 	const selectionButtons = document.querySelectorAll(
 		".selection-container input",
 	);
-	for (button of selectionButtons) {
-		button.addEventListener("click", function () {
+
+	for (const button of selectionButtons) {
+		button.addEventListener("click", function() {
 			selectedValue = this.value;
 		});
 	}
 
 	const gridCells = document.querySelectorAll(".cell");
 	for (cell of gridCells) {
-		cell.addEventListener("click", function () {
+		cell.addEventListener("click", function() {
 			if (selectedValue !== null && this.value === "") {
 				this.value = selectedValue;
 			}
 		});
 	}
-	clear();
+
+	manageClear();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
