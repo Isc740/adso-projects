@@ -1,0 +1,41 @@
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+}
+
+#grid-container input {
+    border: 1px solid #000;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+.grid {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.selection-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.selection-container input,
+.reset-container input {
+    padding: 10px 30px;
+}
+
+.reset-container {
+    padding-top: 3%;
+    display: flex;
+    justify-content: center;
+}
