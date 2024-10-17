@@ -30,7 +30,6 @@ namespace atm
         static void Main()
         {
             Console.WriteLine("Bienvenido al cajero automatico!");
-
             Console.WriteLine("Ingrese su id:");
             int id;
             bool idSuccess = int.TryParse(Console.ReadLine(), out id);
@@ -39,9 +38,30 @@ namespace atm
             int passwd;
             bool passwdSuccess = int.TryParse(Console.ReadLine(), out passwd);
 
-            if (passwdSuccess && idSuccess)
+            if (!passwdSuccess && !idSuccess)
             {
+                Console.WriteLine("Credenciales ingresadas no validas");
+            }
+            else
+            {
+                Result credentials = CheckCredentials(id, passwd);
             }
         }
+
+        static Result CheckCredentials(int targetId, int targetPasswd)
+        {
+            Result result = new Result { index = -1, result = false };
+
+            for (int i = 0; i < userDatabase.Length; i++)
+            {
+                if (userDatabase[i].id == targetId && userDatabase[i].passwd == targetPasswd)
+                {
+                    result.index = i;
+                    result.result = true;
+                }
+            }
+            return result;
+        }
+
     }
 }
