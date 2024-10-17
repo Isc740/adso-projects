@@ -5,7 +5,7 @@ const manageResets = () => {
     document.getElementById("reset").addEventListener("click", () => {
         gridCells.forEach((cell) => {
             cell.value = "";
-            cell.style.color = "#000"; // Reset color to default
+            cell.style.color = "#000";
         });
     });
     reset = true;
