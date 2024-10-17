@@ -1,0 +1,14 @@
+﻿// See https://aka.ms/new-console-template for more information
+
+/*using System;*/
+
+namespace atm
+{
+    class Atm
+    {
+        static void Main()
+        {
+
+        }
+    }
+}
