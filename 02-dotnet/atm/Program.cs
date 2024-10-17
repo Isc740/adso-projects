@@ -2,6 +2,20 @@
 
 /*using System;*/
 
+struct UserData
+{
+    int id;
+    int passwd;
+    int balance;
+    string name;
+}
+
+struct Result
+{
+    int index;
+    bool result;
+}
+
 namespace atm
 {
     class Atm
