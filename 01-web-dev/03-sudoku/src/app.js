@@ -14,6 +14,19 @@ const manageResets = () => {
 
 const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
 
+const get3x3GridCells = (gridCells, row, col) => {
+    const gridRowStart = Math.floor(row / 3) * 3;
+    const gridColStart = Math.floor(col / 3) * 3;
+    const cells = [];
+
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            cells.push(gridCells[(gridRowStart + i) * 9 + (gridColStart + j)]);
+        }
+    }
+    return cells;
+};
+
 const generateSudokuTemplate = () => {
     const template = Array(81).fill(0);
     const baseNumbers = shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
@@ -55,6 +68,7 @@ const manageUserInput = () => {
         cell.addEventListener("click", () => {
             if (selectedValue && !cell.value) {
                 cell.value = selectedValue;
+                validateUserInput(cell);
             }
         });
     });
@@ -63,4 +77,5 @@ const manageUserInput = () => {
 document.addEventListener("DOMContentLoaded", () => {
     manageUserInput();
     manageResets();
+    generateRandomSudoku();
 });
