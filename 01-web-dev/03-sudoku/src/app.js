@@ -89,8 +89,8 @@ const generateValidSudoku = (emptyCells = 40) => {
         do {
             row = Math.floor(Math.random() * 9);
             col = Math.floor(Math.random() * 9);
-        } while (grid[row][col] === 0); // Ensure we only remove filled cells
-        grid[row][col] = 0; // Set the cell to empty
+        } while (grid[row][col] === 0);
+        grid[row][col] = 0;
     }
 
     return grid.flat();
@@ -98,10 +98,10 @@ const generateValidSudoku = (emptyCells = 40) => {
 
 const generateRandomSudoku = () => {
     const gridCells = document.querySelectorAll(".grid-cell");
-    const template = generateValidSudoku(40); // Specify number of empty cells
+    const template = generateValidSudoku(40);
 
     template.forEach((val, index) => {
-        gridCells[index].value = val ? val : ""; // 0 means empty
+        gridCells[index].value = val ? val : "";
         gridCells[index].style.color = "#000";
     });
 };
