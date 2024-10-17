@@ -1,5 +1,5 @@
 main {
-    display: flex ;
+    display: flex;
     justify-content: center;
     margin-top: 6%;
 }
@@ -7,7 +7,7 @@ main {
 #grid-container {
     display: grid;
     grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px ;
+    grid-template-rows: 200px 200px 200px;
 }
 
 #grid-container input {
@@ -28,6 +28,13 @@ main {
     margin-top: 5%;
 }
 
-.selection-container input {
+.selection-container input,
+.reset-container input {
     padding: 10px 30px;
+}
+
+.reset-container {
+    padding-top: 3%;
+    display: flex;
+    justify-content: center;
 }
