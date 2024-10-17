@@ -11,9 +11,10 @@ main {
 }
 
 #grid-container input {
-    border: 0.1;
+    border: 1px solid #000;
     box-shadow: none;
     border-radius: 0;
+    background-color: #fff;
 }
 
 .grid {
