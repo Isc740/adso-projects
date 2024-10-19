@@ -1,1 +1,2 @@
-./02-dotnet/atm/obj/*
+02-dotnet/atm/obj/
+02-dotnet/atm/bin/
