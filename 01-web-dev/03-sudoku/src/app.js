@@ -1,4 +1,4 @@
-let reset = false;
+let _reset = false;
 
 const manageResets = () => {
     const gridCells = document.querySelectorAll(".grid-cell");
@@ -9,7 +9,7 @@ const manageResets = () => {
         });
         generateRandomSudoku();
     });
-    reset = true;
+    _reset = true;
 };
 
 const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
