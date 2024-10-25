@@ -308,9 +308,9 @@
         public static void Ex19() {
             Console.WriteLine("Ingrese su fecha de nacimiento: (YYYYMMDD)");
             int birthdate;
-            bool birtdateR = int.TryParse(Console.ReadLine(), out birthdate);
+            bool birtdateT = int.TryParse(Console.ReadLine(), out birthdate);
 
-            if (!birtdateR || birthdate.ToString().Length < 8) {
+            if (!birtdateT || birthdate.ToString().Length < 8) {
                 Console.WriteLine("Valor ingresado no valido");
                 return;
             }
@@ -327,6 +327,19 @@
             }
 
             Console.WriteLine($"Tu edad es: {result}");
+        }
+
+        public static void Ex20() {
+            Console.WriteLine("Ingrese su edad:");
+            int age;
+            bool ageT = int.TryParse(Console.ReadLine(), out age);
+
+            if (!ageT) {
+                Console.WriteLine("Valor ingresado no valido");
+                return;
+            }
+
+            if (age > 60) { Console.WriteLine("ADULTO MAYOR"); }
         }
     }
 }
