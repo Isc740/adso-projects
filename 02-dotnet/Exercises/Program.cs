@@ -341,5 +341,18 @@
 
             if (age > 60) { Console.WriteLine("ADULTO MAYOR"); }
         }
+
+        public static void Ex21() {
+            Console.WriteLine("Ingrese la cantidad de dolares: ");
+            int dolars;
+
+            if (!int.TryParse(Console.ReadLine(), out dolars)) {
+                Console.WriteLine("Valor ingresado no valido");
+                return;
+            }
+
+            Console.WriteLine($"El equivalente de {dolars} a pesos son: {dolars * 4320.76f}");
+        }
+
     }
 }
