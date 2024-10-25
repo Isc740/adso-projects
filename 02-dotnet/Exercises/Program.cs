@@ -354,5 +354,16 @@
             Console.WriteLine($"El equivalente de {dolars} a pesos son: {dolars * 4320.76f}");
         }
 
+        public static void Ex22() {
+            Console.WriteLine("Ingrese los grados celcius:");
+            int degrees;
+
+            if (!int.TryParse(Console.ReadLine(), out degrees)) {
+                Console.WriteLine("Valor ingresado no valido");
+                return;
+            }
+
+            Console.WriteLine($"{degrees} a grados son: {(1.8) * degrees + 32}");
+        }
     }
 }
