@@ -1,7 +1,7 @@
 ﻿namespace Exercises {
     public class ExerciseHandler {
         public static void Main() {
-            Ex16();
+            Ex19();
         }
 
         public static void Ex1() {
@@ -303,6 +303,30 @@
             }
 
             Console.WriteLine($"{miles} transformados a metros son: {miles * 1851.99932587}");
+        }
+
+        public static void Ex19() {
+            Console.WriteLine("Ingrese su fecha de nacimiento: (YYYYMMDD)");
+            int birthdate;
+            bool birtdateR = int.TryParse(Console.ReadLine(), out birthdate);
+
+            if (!birtdateR || birthdate.ToString().Length < 8) {
+                Console.WriteLine("Valor ingresado no valido");
+                return;
+            }
+
+            int year = birthdate / 10000;
+            int month = (birthdate % 10000) / 100;
+            int day = (birthdate % 100);
+
+            DateTime now = DateTime.Now;
+
+            int result = now.Year - year;
+            if (month > now.Month || month == now.Month && day > now.Day) {
+                result--;
+            }
+
+            Console.WriteLine($"Tu edad es: {result}");
         }
     }
 }
