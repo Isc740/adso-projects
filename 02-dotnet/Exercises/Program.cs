@@ -365,5 +365,36 @@
 
             Console.WriteLine($"{degrees} a grados son: {(1.8) * degrees + 32}");
         }
+
+        public static void Ex23() {
+
+            Console.WriteLine("Ingrese nota 1:");
+            int note1;
+            bool note1T = int.TryParse(Console.ReadLine(), out note1);
+
+            Console.WriteLine("Ingrese nota 2:");
+            int note2;
+            bool note2T = int.TryParse(Console.ReadLine(), out note2);
+
+            Console.WriteLine("Ingrese nota 3:");
+            int note3;
+            bool note3T = int.TryParse(Console.ReadLine(), out note3);
+
+            if (!note3T || !note2T || !note1T) {
+                Console.WriteLine("Valor ingreado no valido");
+                return;
+            }
+
+            double result = ((note1 * .20) + (note2 * .30) + (note3 * .50)) / 3;
+
+            Console.WriteLine($"El resultado{result}");
+
+            if (result >= 3.5) {
+                Console.WriteLine("Puede habilitar");
+            }
+            else if (result > 2.0) {
+                Console.WriteLine("No puede habilitar");
+            }
+        }
     }
 }
