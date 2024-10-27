@@ -1,7 +1,10 @@
 ﻿namespace Exercises {
     public class ExerciseHandler {
         public static void Main() {
-            Ex19();
+            // Decidí convertir a cada ejercicio en un metodo de esta clase.
+            // llama el ejercicio que quieras usando Ex{N}();
+
+            Ex26();
         }
 
         public static void Ex1() {
@@ -68,10 +71,10 @@
         public static void Ex4() {
             int height, width;
 
-            Console.WriteLine("Ingrese el alto");
+            Console.WriteLine("Ingrese el alto:");
             bool heightResult = int.TryParse(Console.ReadLine(), out height);
 
-            Console.WriteLine("Ingrese el ancho");
+            Console.WriteLine("Ingrese el ancho:");
             bool widthResult = int.TryParse(Console.ReadLine(), out width);
 
             if (!heightResult || !widthResult) {
@@ -100,7 +103,7 @@
             int height;
             bool heightT = int.TryParse(Console.ReadLine(), out height);
 
-            Console.WriteLine("Ingrese el ancho");
+            Console.WriteLine("Ingrese el ancho:");
             int width;
             bool widthT = int.TryParse(Console.ReadLine(), out width);
 
@@ -113,17 +116,17 @@
         }
 
         public static void Ex7() {
-            Console.WriteLine("Ingrese su nombre: ");
+            Console.WriteLine("Ingrese su nombre:");
             string name = Console.ReadLine();
 
-            Console.WriteLine("Ingrese su apellido");
+            Console.WriteLine("Ingrese su apellido:");
             string lastName = Console.ReadLine();
 
             Console.WriteLine($"{name} {lastName}");
         }
 
         public static void Ex8() {
-            Console.WriteLine("Ingrese el radio: ");
+            Console.WriteLine("Ingrese el radio:");
             int radius;
             bool radiusT = int.TryParse(Console.ReadLine(), out radius);
 
@@ -136,7 +139,7 @@
         }
 
         public static void Ex9() {
-            Console.WriteLine("Ingrese el radio: ");
+            Console.WriteLine("Ingrese el radio:");
             float radius;
             bool radiusT = float.TryParse(Console.ReadLine(), out radius);
 
@@ -212,9 +215,10 @@
             if (num1 < 0) {
                 num1 *= -1;
             }
-            else if (num2 < 0) {
+            if (num2 < 0) {
                 num2 *= -1;
             }
+            Console.WriteLine($"{num1} {num2}");
 
             Console.WriteLine($"La suma es: {num1 + num2}");
         }
@@ -235,7 +239,7 @@
         public static void Ex14() {
             Console.WriteLine("Bienvenido al club Sol Naciente!");
 
-            Console.WriteLine("Ingrese su antiguedad");
+            Console.WriteLine("Ingrese su antiguedad:");
             int age;
             bool ageT = int.TryParse(Console.ReadLine(), out age);
 
@@ -267,7 +271,7 @@
         }
 
         public static void Ex16() {
-            Console.WriteLine("Ingrese numero para sumar");
+            Console.WriteLine("Ingrese numero para sumar:");
             int num;
             bool numT = int.TryParse(Console.ReadLine(), out num);
 
@@ -385,9 +389,9 @@
                 return;
             }
 
-            double result = ((note1 * .20) + (note2 * .30) + (note3 * .50)) / 3;
+            float result = (float)((note1 * .20) + (note2 * .30) + (note3 * .50)) / 3;
 
-            Console.WriteLine($"El resultado{result}");
+            Console.WriteLine($"El resultado es: {result}");
 
             if (result >= 3.5) {
                 Console.WriteLine("Puede habilitar");
@@ -395,6 +399,111 @@
             else if (result > 2.0) {
                 Console.WriteLine("No puede habilitar");
             }
+        }
+
+        public static void Ex24() {
+            Console.WriteLine("Ingrese el precio de una unidad:");
+            int price;
+            bool priceT = int.TryParse(Console.ReadLine(), out price);
+
+            Console.WriteLine("Ingrese la cantidad de las unidades:");
+            int units;
+            bool unitsT = int.TryParse(Console.ReadLine(), out units);
+
+            if (!unitsT || !priceT) {
+                Console.WriteLine("Valor ingresado no valido");
+                return;
+            }
+
+            int comission = price * units;
+            int comissionType = 0;
+            if (units >= 500 && units <= 999) {
+                comission -= (int)Math.Round(comission * .05);
+                comissionType = 5;
+            }
+            else if (units > 999) {
+                comission -= (int)Math.Round(comission * .10);
+                comissionType = 10;
+            }
+
+            Console.WriteLine($"Su comision es del: {comissionType}%");
+            Console.WriteLine($"Su comision es: {comission}");
+        }
+
+        public static void Ex25() {
+
+            List<int> result = new List<int>();
+
+            int[] nums = new int[20];
+            bool numsT;
+            for (int i = 0; i < 20; i++) {
+                Console.WriteLine($"Ingrese el numero {i + 1}:");
+                numsT = int.TryParse(Console.ReadLine(), out nums[i]);
+
+                if (!numsT) {
+                    Console.WriteLine("Ingrese un numero entero");
+                    i--;
+                }
+                else if (nums[i] >= 25) {
+                    result.Add(nums[i]);
+                }
+            }
+
+            Console.WriteLine("Los numeros mayores o iguales a 25 son:");
+
+            for (int i = 0; i < result.Count; i++) {
+                Console.WriteLine($"{result[i]}");
+            }
+        }
+
+        public static void Ex26() {
+            int[] nums = new int[10];
+            int acc = 0;
+            for (int i = 0; i < nums.Length; i++) {
+                Console.WriteLine($"Ingrese el numero {i + 1}:");
+                bool numsT = int.TryParse(Console.ReadLine(), out nums[i]);
+
+                if (!numsT) {
+                    Console.WriteLine("Ingrese un numero entero");
+                    i--;
+                }
+                else {
+                    acc += nums[i];
+                }
+            }
+
+            Console.WriteLine($"La suma de los numeros es: {acc}");
+            Console.WriteLine($"El promedio de los numeros es: {acc / nums.Length}");
+        }
+
+        public static void Ex27() {
+            int minors = 0;
+            int adults = 0;
+            int seniors = 0;
+
+            for (int i = 0; i < 10; i++) {
+                Console.WriteLine($"{i + 1} Ingrese su edad:");
+                int age;
+                bool agesT = int.TryParse(Console.ReadLine(), out age);
+
+                if (!agesT) {
+                    Console.WriteLine("Ingrese un numero entero");
+                    i--;
+                }
+                else if (age < 18) {
+                    minors++;
+                }
+                else if (age >= 18) {
+                    adults++;
+                    if (age >= 60) {
+                        seniors++;
+                    }
+                }
+            }
+
+            Console.WriteLine($"El numero de menores son: {minors}");
+            Console.WriteLine($"El numero de adultos son: {adults}");
+            Console.WriteLine($"El numero de mayores son: {seniors}");
         }
     }
 }
